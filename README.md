@@ -4,7 +4,8 @@ Customer Statement Processor Service
 
 This is a Spring Boot Application implementing a REST API to validate a monthly list of Customer Statement.
 
-About
+About : 
+
 This application processes customer statements to ensure each transaction reference number is unique in a single payload and the sum total of Starting Balance and Mutation is equal to the Ending Balance (per transaction reference). Since there has been no business requirement of persisting data, thereby there is no database transactions available with this service implementation.
 
 This API is built to address the following error scenarios as part of customer statement payload validation process: 
@@ -26,7 +27,8 @@ Java 11
 Spring Boot 2
 JUnit 5
 
-Operations
+Operations :
+
 POST : /customers/process-statement - For validating and processing list of Customer Statements
 
 Test Cases: 
@@ -194,7 +196,7 @@ Payload for Scenario 6>
 
 [
 	{
-  "transactionReference": 121,	
+        "transactionReference": 121,	
 	"accountNumber": "TEST_INTERNAL_SERVER_ERROR",
 	"startBalance": 100.00,
 	"mutation": 11.01,
@@ -220,13 +222,16 @@ Payload for Scenario 6>
 ]
 
     
-Production Enablement
+Production Enablement : 
+
 Extensive test cases have been incorporated which includes both JUnit and Spring Integration.
 
-Installation
+Installation : 
+
 The application is build with Spring Boot 2 and would get deployed within the SpringBoot contained Tomcat server. Please build and run the customer-statement-processor-0.0.1-SNAPSHOT.jar. 
 To start locally please use the below command 
 java -jar target/customer-statement-processor-0.0.1-SNAPSHOT.jar
 
-Contributor
+Contributor : 
+
 Payel Saha --- payel.saha85@gmail.com
